@@ -1,0 +1,144 @@
+<mvc:View
+	controllerName="zsfmike.controller.Overview"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:suite="sap.suite.ui.microchart"
+	xmlns:core="sap.ui.core"
+	xmlns:commons="sap.ui.commons"
+	xmlns:mvc="sap.ui.core.mvc">
+	
+	<Page
+		id="page"
+		navButtonPress="onNavBack"
+		showNavButton="true"
+		title="{i18n>pageTitle}">
+		<content>
+			<IconTabBar>
+				<items>
+					<IconTabFilter text="{i18n>tabFilter0}">
+						<Text text="test"/>
+						<viz:VizFrame id="idpiechart" xmlns="sap.viz" height='100%' width="100%" vizType='pie'/>
+					</IconTabFilter>
+					<IconTabFilter
+						text="{i18n>tabFilter1}">
+						<VBox>
+							<HBox>
+								<FlexBox
+									id="redBox"
+									height="100px"
+									width="100px"
+									class="redBox"
+									alignItems="Center"
+									justifyContent="Center">
+									<items>
+										<FlexBox width="95px" height="95px" alignItems="Center" justifyContent="SpaceBetween">
+											<items>
+												<suite:RadialMicroChart percentage="18" valueColor="Good"></suite:RadialMicroChart>
+											</items>
+										</FlexBox>
+									</items>
+								</FlexBox>
+								<FlexBox
+									id="yellowBox"
+									height="100px"
+									width="100px"
+									class="yellowBox"
+									alignItems="Center"
+									justifyContent="Center">
+									<items>
+										<FlexBox width="95px" height="95px" alignItems="Center" justifyContent="SpaceBetween">
+											<items>
+												<suite:RadialMicroChart percentage="20" valueColor="Good"></suite:RadialMicroChart>
+											</items>
+										</FlexBox>
+									</items>
+								</FlexBox>
+							</HBox>
+							<HBox>
+								<FlexBox
+									id="blueBox"
+									height="100px"
+									width="100px"
+									class="blueBox"
+									alignItems="Center"
+									justifyContent="Center">
+									<items>
+										<FlexBox width="95px" height="95px" alignItems="Center" justifyContent="SpaceBetween">
+											<items>
+												<suite:RadialMicroChart percentage="38.8" valueColor="Good"></suite:RadialMicroChart>
+											</items>
+										</FlexBox>
+									</items>
+								</FlexBox>
+								<FlexBox
+									id="greenBox"
+									height="100px"
+									width="100px"
+									class="greenBox"
+									alignItems="Center"
+									justifyContent="Center">
+									<items>
+										<FlexBox width="95px" height="95px" alignItems="Center" justifyContent="SpaceBetween">
+											<items>
+												<suite:RadialMicroChart percentage="23.2" valueColor="Good"></suite:RadialMicroChart>
+											</items>
+										</FlexBox>
+									</items>
+								</FlexBox>
+							</HBox>
+						</VBox>
+					</IconTabFilter>
+					
+					
+					<IconTabFilter
+						text="{i18n>tabFilter2}">
+						
+						<l:BlockLayout id="BlockLayout" background="{/selectedBackground}">
+							<l:BlockLayoutRow>
+								<l:BlockLayoutCell
+										width="1"
+										title="Left aligned heading">
+									<Text text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr."/>
+									<RadioButtonGroup columns="2" selectedIndex="2" class="sapUiMediumMarginTop">
+										<buttons>
+											<RadioButton id="RB2-1" text="Option 1"/>
+											<RadioButton id="RB2-2" text="Option 2" editable="false"/>
+											<RadioButton id="RB2-3" text="Option 3"/>
+										</buttons>
+									</RadioButtonGroup>
+								</l:BlockLayoutCell>
+								<l:BlockLayoutCell
+									title="25% width cell">
+									<Text text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr."/>
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+							<l:BlockLayoutRow>
+								<l:BlockLayoutCell
+										width="1"
+										title="Left aligned heading">
+									<Text text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr."/>
+									<RadioButtonGroup columns="2" selectedIndex="2" class="sapUiMediumMarginTop">
+										<buttons>
+											<RadioButton id="R42-1" text="Option 1"/>
+											<RadioButton id="R42-2" text="Option 2" editable="false"/>
+											<RadioButton id="R42-3" text="Option 3"/>
+										</buttons>
+									</RadioButtonGroup>
+								</l:BlockLayoutCell>
+								<l:BlockLayoutCell
+									title="25% width cell">
+									<Text text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr."/>
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+						</l:BlockLayout>
+					</IconTabFilter>
+					<IconTabFilter
+						text="{i18n>tabFilter3}">
+						<Text text="Notes go here ..." />
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+	</Page>
+</mvc:View>
